@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17152f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon.svg"><link rel="stylesheet" href="styles.css">
+<title>Full Body Forge</title>
+</head>
+<body>
+<header><div><small>YOUR PROGRAMME</small><h1>Full Body Forge</h1></div><button id="installBtn" class="ghost" hidden>Install</button></header>
+<main>
+<section id="today" class="page active"><div class="hero"><div><span class="pill" id="dayPill">DAY A</span><h2 id="workoutTitle">Strength foundation</h2><p id="coverage"></p></div><button id="cycleDay" class="round">↻</button></div><div class="summary"><div><b id="sessionCount">0</b><span>sessions</span></div><div><b>200 g</b><span>protein target</span></div><div><b>85 kg</b><span>goal</span></div></div><div id="exerciseList"></div><button id="finishWorkout" class="primary full">Finish workout</button></section>
+<section id="plan" class="page"><div class="heading"><h2>5 to 6 day rotation</h2><p>Three full-body templates. Repeat A, B, C. Use a rest day whenever recovery or performance calls for it.</p></div><div id="planCards"></div></section>
+<section id="progress" class="page"><div class="heading"><h2>Progress</h2><p>Recent completed sessions and exercise recommendations.</p></div><div class="card"><h3>Body weight</h3><div class="weight-row"><input id="weightInput" type="number" step="0.1" inputmode="decimal" placeholder="87.9"><span>kg</span><button id="logWeight">Log</button></div><div id="weightHistory" class="mini-list"></div></div><div class="card"><h3>Training history</h3><div id="history"></div></div></section>
+<section id="settings" class="page"><div class="heading"><h2>Settings</h2><p>Recommendations use double progression and your logged performance.</p></div><div class="card"><label>Small load increment (kg)<input id="smallIncrement" type="number" step="0.5" value="2.5"></label><label>Lower-body increment (kg)<input id="largeIncrement" type="number" step="0.5" value="5"></label><label>Training days per week<select id="daysPerWeek"><option>5</option><option selected>6</option></select></label><button id="resetData" class="danger">Reset all app data</button></div><div class="card note"><h3>How recommendations work</h3><ul><li>All sets reach the top of the rep range with 1 or more reps in reserve: increase next time.</li><li>Sets remain inside the range: keep the load and build reps.</li><li>Multiple sets fall below the minimum: reduce the load by about 5%.</li></ul><p>Recommendations are training suggestions, not medical advice. Stop if you experience pain, dizziness or unusual symptoms.</p></div></section>
+</main>
+<nav><button data-page="today" class="active">◉<span>Today</span></button><button data-page="plan">▤<span>Plan</span></button><button data-page="progress">⌁<span>Progress</span></button><button data-page="settings">⚙<span>Settings</span></button></nav>
+<dialog id="swapDialog"><form method="dialog"><div class="dialog-head"><div><small>SWAP EXERCISE</small><h2 id="swapTitle"></h2></div><button value="cancel" class="round">×</button></div><p>Alternatives target the same movement and muscle group. Equipment filters are optional.</p><label>Available equipment<select id="equipmentFilter"><option value="all">Any equipment</option><option>Barbell</option><option>Dumbbell</option><option>Machine</option><option>Cable</option><option>Bodyweight</option><option>Band</option></select></label><div id="swapOptions"></div></form></dialog>
+<script src="app.js"></script>
+</body></html>
