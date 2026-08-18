@@ -1,20 +1,9 @@
-# Full Body Forge PWA
+# Full Body Forge v2
 
-A mobile-first, offline-capable workout planner and tracker.
+## New Workout Builder
+Use the Builder tab to select Day A, B or C; rename the workout; edit the coverage note; add, remove, switch or reorder exercises; and change sets, minimum reps, maximum reps and starting load. Changes save immediately on the device.
 
-## Included
-- A/B/C full-body rotation for 5 or 6 training days
-- Exercise switching by movement pattern and available equipment
-- Set, rep, load and reps-in-reserve logging
-- Double-progression recommendations based on previous performance
-- Body-weight and workout history stored on-device
-- Installable PWA manifest and offline service worker
+## Update the hosted app
+Replace the files from the previous deployment with these files, keeping them at the site root. The service worker cache name has been changed to `fbf-v2`. Open the hosted site in Safari once while online to retrieve the update.
 
-## Publish
-This must be served over HTTPS for full PWA installation and offline behaviour. Upload the folder to a static host such as GitHub Pages, Cloudflare Pages, Netlify or Vercel. No build command is required.
-
-## iPhone installation
-Open the published HTTPS address in Safari, tap Share, then Add to Home Screen.
-
-## Data
-All data is stored in the browser's localStorage on that device. Clearing website data removes it.
+Note: this release uses a new local-storage schema (`fbf2`). Existing v1 logs are not automatically migrated.

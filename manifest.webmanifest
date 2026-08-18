@@ -1,7 +1,6 @@
 {
   "name": "Full Body Forge",
   "short_name": "Body Forge",
-  "description": "Full-body workout planning and progressive overload tracking",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f5f5fa",
